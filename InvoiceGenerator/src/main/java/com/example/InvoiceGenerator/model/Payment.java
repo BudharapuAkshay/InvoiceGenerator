@@ -31,7 +31,7 @@ public class Payment {
     // New fields
     private String buyerInfo;
     private String receiverInfo;
-    private List<Item> items; // List of items bought
+    private List<Item> items;
 
     @Data
     @AllArgsConstructor
