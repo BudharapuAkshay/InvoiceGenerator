@@ -36,7 +36,7 @@ public class InvoiceGeneratorService {
             PdfWriter.getInstance(document, new FileOutputStream(pdfFileName));
             document.open();
 
-            document.add(new Paragraph("Invoice", FontFactory.getFont(FontFactory.HELVETICA_BOLD, 20)));
+            document.add(new Paragraph("INVOICE", FontFactory.getFont(FontFactory.HELVETICA_BOLD, 20)));
             document.add(new Paragraph(" "));
             PdfPTable infoTable = new PdfPTable(2);
             infoTable.setWidthPercentage(100);
@@ -85,8 +85,8 @@ public class InvoiceGeneratorService {
             double finalAmount = totalAmount - tdsAmount;
             PdfPTable tdsTable = new PdfPTable(4);
             tdsTable.setWidthPercentage(100);
-            itemTable.addCell(emptyCell1);
-            itemTable.addCell(emptyCell2);
+            tdsTable.addCell(emptyCell1);
+            tdsTable.addCell(emptyCell2);
             tdsTable.addCell("TDS (" + payment.getTds() + "%)");
             tdsTable.addCell(String.valueOf(tdsAmount));
 
