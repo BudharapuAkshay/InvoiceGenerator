@@ -37,7 +37,7 @@ public class InvoiceGeneratorService {
             document.open();
 
             document.add(new Paragraph("Invoice", FontFactory.getFont(FontFactory.HELVETICA_BOLD, 20)));
-            document.add(new Paragraph(" ")); 
+            document.add(new Paragraph(" "));
             PdfPTable infoTable = new PdfPTable(2);
             infoTable.setWidthPercentage(100);
             PdfPCell receiverCell = new PdfPCell(new Paragraph("Receiver Info: \n" + payment.getReceiverInfo()+"\nReceiver A/C: "+payment.getTargetBankAccount()));
